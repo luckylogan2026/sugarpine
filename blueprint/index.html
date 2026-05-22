@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RV Park Profit Blueprint — Sugarpine Property Management</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --dark: #0D1F0E;
+    --dark-mid: #1A3D1B;
+    --dark-card: #162D17;
+    --gold: #D4A853;
+    --gold-light: #E8C470;
+    --white: #FFFFFF;
+    --muted: #C8D4C4;
+    --muted-dark: #5A7058;
+    --red: #8B1A1A;
+    --green-bright: #4CAF50;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--dark);
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── HEADER ── */
+  .site-header {
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(212,168,83,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(13,31,14,0.97);
+    backdrop-filter: blur(8px);
+  }
+  .logo-text {
+    font-family: 'Barlow', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+  .logo-text span { color: var(--gold); }
+  .header-cta {
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--dark);
+    background: var(--gold);
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background 0.2s;
+  }
+  .header-cta:hover { background: var(--gold-light); }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 100px 40px 80px;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at 70% 40%, rgba(212,168,83,0.06) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .hero-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(44px, 6vw, 74px);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--white);
+    margin-bottom: 16px;
+    max-width: 820px;
+  }
+  .hero-headline em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .hero-sub {
+    font-size: 20px;
+    color: var(--muted);
+    max-width: 640px;
+    margin-bottom: 40px;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+  .hero-credibility {
+    display: flex;
+    gap: 48px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+  }
+  .cred-item { display: flex; flex-direction: column; }
+  .cred-number {
+    font-family: 'Barlow', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .cred-label {
+    font-size: 14px;
+    color: var(--muted-dark);
+    letter-spacing: 0.05em;
+    margin-top: 4px;
+  }
+  .hero-divider {
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin-bottom: 50px;
+  }
+
+  /* ── PAIN ── */
+  .pain-section {
+    background: var(--dark-mid);
+    padding: 80px 40px;
+    border-top: 1px solid rgba(212,168,83,0.15);
+    border-bottom: 1px solid rgba(212,168,83,0.15);
+  }
+  .pain-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+  }
+  .pain-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(30px, 3.5vw, 44px);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--white);
+    margin-bottom: 24px;
+  }
+  .pain-text {
+    font-size: 18px;
+    color: var(--muted);
+    line-height: 1.85;
+    font-weight: 300;
+  }
+  .pain-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+  .stat-card {
+    background: var(--dark-card);
+    padding: 36px 30px;
+    border: 1px solid rgba(212,168,83,0.1);
+  }
+  .stat-card.highlight {
+    background: rgba(139,26,26,0.3);
+    border-color: rgba(139,26,26,0.4);
+  }
+  .stat-big {
+    font-family: 'Barlow', sans-serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .stat-card.highlight .stat-big { color: #FF6B6B; }
+  .stat-desc { font-size: 15px; color: var(--muted); line-height: 1.5; }
+  .stat-quote {
+    grid-column: 1 / -1;
+    padding: 28px 30px;
+    border-left: 3px solid var(--gold);
+    background: rgba(212,168,83,0.05);
+  }
+  .stat-quote p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* ── INSIDE ── */
+  .inside-section {
+    padding: 100px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .section-eyebrow {
+    font-family: 'Barlow', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-eyebrow::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .section-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(34px, 4vw, 54px);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 14px;
+    line-height: 1.1;
+  }
+  .section-sub {
+    font-size: 18px;
+    color: var(--muted);
+    margin-bottom: 60px;
+    font-weight: 300;
+    max-width: 580px;
+    line-height: 1.7;
+  }
+  .checklist-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+  .checklist-column { display: flex; flex-direction: column; gap: 2px; }
+  .checklist-header {
+    background: var(--dark-mid);
+    padding: 18px 26px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border-left: 3px solid var(--gold);
+  }
+  .checklist-item {
+    background: var(--dark-card);
+    padding: 20px 26px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    border: 1px solid rgba(255,255,255,0.03);
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .checklist-item:hover {
+    background: rgba(26,61,27,0.8);
+    border-color: rgba(212,168,83,0.15);
+  }
+  .check-icon {
+    color: var(--green-bright);
+    font-size: 16px;
+    margin-top: 2px;
+    flex-shrink: 0;
+    font-weight: 700;
+  }
+  .check-text {
+    font-size: 16px;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+  .check-text strong {
+    color: var(--white);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 3px;
+    font-size: 17px;
+  }
+
+  /* ── PRICE ── */
+  .price-section {
+    background: var(--dark-mid);
+    padding: 100px 40px;
+    border-top: 1px solid rgba(212,168,83,0.15);
+    border-bottom: 1px solid rgba(212,168,83,0.15);
+  }
+  .price-inner {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .price-anchor {
+    font-size: 18px;
+    color: var(--muted);
+    margin-bottom: 44px;
+    font-style: italic;
+    line-height: 1.8;
+    font-weight: 300;
+  }
+  .price-anchor strong { color: var(--white); font-style: normal; }
+  .price-box {
+    border: 1px solid rgba(212,168,83,0.3);
+    padding: 56px;
+    margin-bottom: 44px;
+    position: relative;
+    background: var(--dark-card);
+  }
+  .price-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--gold);
+  }
+  .price-amount {
+    font-family: 'Barlow', sans-serif;
+    font-size: 88px;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .price-amount sup { font-size: 40px; vertical-align: super; }
+  .price-terms {
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--muted-dark);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  .price-points {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+    margin-bottom: 44px;
+    flex-wrap: wrap;
+  }
+  .price-point {
+    font-size: 15px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .price-point::before { content: '✓'; color: var(--green-bright); font-weight: 700; }
+  .cta-button {
+    display: block;
+    background: var(--gold);
+    color: var(--dark);
+    text-decoration: none;
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 26px 60px;
+    transition: background 0.2s, transform 0.1s;
+    width: 100%;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+  }
+  .cta-button:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .cta-sub { font-size: 14px; color: var(--muted-dark); margin-top: 16px; }
+
+  /* ── OBJECTIONS ── */
+  .objections-section {
+    padding: 100px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .objections-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 56px;
+  }
+  .objection-card {
+    background: var(--dark-card);
+    padding: 40px 34px;
+    border: 1px solid rgba(255,255,255,0.03);
+    border-top: 2px solid var(--gold);
+  }
+  .objection-q {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 18px;
+    line-height: 1.3;
+    font-style: italic;
+  }
+  .objection-a {
+    font-size: 16px;
+    color: var(--muted);
+    line-height: 1.8;
+    font-weight: 300;
+  }
+
+  
+
+  /* ── BIO ── */
+  .bio-section {
+    padding: 100px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .bio-left { position: sticky; top: 100px; }
+  .bio-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+    line-height: 1.1;
+  }
+  .bio-title {
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    line-height: 1.6;
+  }
+  .bio-stats { display: flex; flex-direction: column; gap: 16px; }
+  .bio-stat {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    color: var(--muted);
+  }
+  .bio-stat::before { content: '—'; color: var(--gold); font-weight: 700; }
+  .bio-right p {
+    font-size: 17px;
+    color: var(--muted);
+    line-height: 1.9;
+    font-weight: 300;
+    margin-bottom: 22px;
+  }
+  .bio-right p strong { color: var(--white); font-weight: 600; }
+  .bio-quote {
+    border-left: 3px solid var(--gold);
+    padding-left: 28px;
+    margin: 36px 0;
+  }
+  .bio-quote p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-style: italic;
+    color: var(--white) !important;
+    line-height: 1.55;
+    margin-bottom: 0 !important;
+  }
+
+  /* ── FINAL CTA ── */
+  .final-cta {
+    background: var(--dark-mid);
+    padding: 110px 40px;
+    text-align: center;
+    border-top: 1px solid rgba(212,168,83,0.2);
+  }
+  .final-cta-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(38px, 5vw, 64px);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 22px;
+    line-height: 1.1;
+  }
+  .final-cta-headline em { color: var(--gold); font-style: italic; }
+  .final-cta-sub {
+    font-size: 18px;
+    color: var(--muted);
+    margin-bottom: 54px;
+    font-weight: 300;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+  }
+  .final-cta-button {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--dark);
+    text-decoration: none;
+    font-family: 'Barlow', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 26px 80px;
+    transition: background 0.2s, transform 0.1s;
+    margin-bottom: 22px;
+  }
+  .final-cta-button:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .final-price-note { font-size: 15px; color: var(--muted-dark); }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 32px 40px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-copy { font-size: 14px; color: var(--muted-dark); }
+  .footer-links { display: flex; gap: 28px; }
+  .footer-links a { font-size: 14px; color: var(--muted-dark); text-decoration: none; }
+  .footer-links a:hover { color: var(--gold); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .site-header { padding: 16px 20px; }
+    .hero { padding: 60px 20px 50px; }
+    .pain-inner { grid-template-columns: 1fr; gap: 44px; }
+    .pain-stats { grid-template-columns: 1fr 1fr; }
+    .checklist-grid { grid-template-columns: 1fr; }
+    .objections-grid { grid-template-columns: 1fr; }
+    .bio-section { grid-template-columns: 1fr; gap: 44px; }
+    .bio-left { position: static; }
+    .price-box { padding: 36px 24px; }
+    .inside-section, .objections-section, .bio-section { padding: 70px 20px; }
+    .price-section, .final-cta { padding: 70px 20px; }
+    .hero-credibility { gap: 28px; }
+    footer { padding: 28px 20px; }
+    .final-cta-button { padding: 22px 40px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="logo-text">Sugarpine <span>Property Management</span></div>
+  <a href="https://rvpark.sugarpinepm.com/order" class="header-cta">Get the Blueprint</a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">The Complete System</div>
+  <h1 class="hero-headline">Stop Spending 4 Hours on Deals That Should Take <em>20 Minutes</em></h1>
+  <p class="hero-sub">The RV Park Profit Blueprint — the exact system AJ uses to analyze any deal, structure the right offer, and never overpay.</p>
+  <div class="hero-credibility">
+    <div class="cred-item">
+      <span class="cred-number">20+</span>
+      <span class="cred-label">Years Active RE Investing</span>
+    </div>
+    <div class="cred-item">
+      <span class="cred-number">$100M+</span>
+      <span class="cred-label">Deal Flow Evaluated</span>
+    </div>
+
+  </div>
+  <div class="hero-divider"></div>
+  <a href="https://rvpark.sugarpinepm.com/order" class="cta-button" style="max-width:380px;">Get the Blueprint — $997 →</a>
+</section>
+
+<!-- PAIN -->
+<section class="pain-section">
+  <div class="pain-inner">
+    <div>
+      <h2 class="pain-headline">The listing number is almost never the real number.</h2>
+      <p class="pain-text">Sellers dress up financials. Brokers present the best case. And most investors don't know what to look for until it's too late — after closing, when reality shows up.<br><br>Not every listing is what it seems. The difference between a profit machine and a money pit is always in the numbers. If you know how to read them.</p>
+    </div>
+    <div class="pain-stats">
+      <div class="stat-card">
+        <div class="stat-big">4 hrs</div>
+        <div class="stat-desc">Per deal to build a working spreadsheet from scratch — assuming no mistakes</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-big">1 bad #</div>
+        <div class="stat-desc">Wrong assumption cascades into every metric in the model</div>
+      </div>
+      <div class="stat-card highlight" style="grid-column: 1 / -1;">
+        <div class="stat-big">$100K+</div>
+        <div class="stat-desc">Typical cost of overpaying on a mis-analyzed deal</div>
+      </div>
+      <div class="stat-quote">
+        <p>"Knowing how to do something and having the experience to do it right are not the same thing."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<section class="inside-section">
+  <div class="section-eyebrow">Everything You Get</div>
+  <h2 class="section-headline">What's Inside the Blueprint</h2>
+  <p class="section-sub">Built from 20+ years of real estate investing and hands-on RV park ownership. Every item below runs automatically — no spreadsheet to build from scratch.</p>
+
+  <div class="checklist-grid">
+    <!-- LEFT COLUMN -->
+    <div class="checklist-column">
+      <div class="checklist-header">Analysis &amp; Underwriting</div>
+
+      <div class="checklist-item">
+        <span class="check-icon">✓</span>
+        <div class="check-text"><strong>Pre-Built Excel Template</strong>No spreadsheet to build from scratch — open it and go</div>
+      </div>
+      <div class="checklist-item">
+        <span class="check-icon">✓</span>
+        <div class="check-text"><strong>5 Key Metrics Calculated Automatically</strong>NOI, Cap Rate, DSCR, Net Profit, CoC — all in one model</div>
+      </div>
+      <div class="checklist-item">
+        <span class="check-icon">✓</span>
+        <div class="check-text"><strong>Find the Real NOI</strong>Not the inflated version the broker or seller wants you to see</div>
+      </div>
+      <div class="checklist-item">
+        <span class="check-icon">✓</span>
+        <div class="check-text"><strong>Stress Test the Deal</strong>Know if it survives a rate spike, vacancy increase, or expense creep</div>
+      </div>
+      <div class="checklist-item">
+        <span class="check-icon">✓</span>
+        <div class="check-text"><strong>Clear Go / Conditional-Go / No-Go Recommendation</strong>No more guessing — the model tells you exactly where you stand</div>
+      </div>
+      <div class="checklist-item">
+        <span class="check-icon">✓</span>
+        <div class="check-text"><strong>Catch the Four Hidden Expenses</strong>The ones sellers almost always hide or understate — built into every analysis</div>
+      </div>
+      <div class="checklist-item">
+        <span class="check-icon">✓</span>
+        <div class="check-text"><strong>8 Red Flag Checks</strong>Spot a manipulated P&amp;L before you open a single spreadsheet</div>
+      </div>
+      <div class="checklist-item">
+        <span class="check-icon">✓</span>
+        <div class="check-text"><strong>See Exactly Where the Upside Is</strong>And how much value you can create before you make an offer</div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="checklist-column">
+      <div class="checklist-header">Offer, Risk &amp; Reporting</div>
+
+      <div class="checklist-item">
+        <span class="check-icon">✓</span>
+        <div class="check-text"><strong>Know Your Maximum Allowable Offer</strong>Before you pick up the phone — backed by your DSCR target</div>
+      </div>
+      <div class="checklist-item">
+        <span class="check-icon">✓</span>
+        <div class="check-text"><strong>Up to 3 Structured Offer Scenarios</strong>Bank financing, partial seller carry, or full seller carry — modeled side by side</div>
+      </div>
+      <div class="checklist-item">
+        <span class="check-icon">✓</span>
+        <div class="check-text"><strong>Model Seller Financing Terms Instantly</strong>See the DSCR impact of any seller note rate and down payment combination</div>
+      </div>
+      <div class="checklist-item">
+        <span class="check-icon">✓</span>
+        <div class="check-text"><strong>Down Payment Trade-Off Analysis</strong>Compare DSCR vs. Cash-on-Cash side by side before you negotiate</div>
+      </div>
+      <div class="checklist-item">
+        <span class="check-icon">✓</span>
+        <div class="check-text"><strong>Full 20-Page AI Underwriting Prompt</strong>Analyze any deal in under 20 minutes — reads financials, normalizes, structures offers, generates reports</div>
+      </div>
+      <div class="checklist-item">
+        <span class="check-icon">✓</span>
+        <div class="check-text"><strong>Deal-Specific Excel Model Generated Automatically</strong>Every analysis produces a customized model for your exact deal</div>
+      </div>
+      <div class="checklist-item">
+        <span class="check-icon">✓</span>
+        <div class="check-text"><strong>Executive Summary PDF</strong>Ready to send to partners or lenders — institutional quality, generated automatically</div>
+      </div>
+      <div class="checklist-item">
+        <span class="check-icon">✓</span>
+        <div class="check-text"><strong>PowerPoint Presentation</strong>Lender and partner ready, built directly from your deal numbers</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section class="price-section">
+  <div class="price-inner">
+    <p class="price-anchor">Even one professional underwrite can cost more than this. <strong>The Blueprint runs it in under 20 minutes</strong> — on every deal you ever analyze, forever. Yours to keep and modify as you see fit.</p>
+    <div class="price-box">
+      <div class="price-amount"><sup>$</sup>997</div>
+      <div class="price-terms">One payment · Yours to keep forever</div>
+      <div class="price-points">
+        <span class="price-point">Instant access</span>
+        <span class="price-point">All files included</span>
+        <span class="price-point">Modify as you see fit</span>
+        <span class="price-point">No subscription</span>
+      </div>
+      <a href="https://rvpark.sugarpinepm.com/order" class="cta-button">Get the Blueprint →</a>
+      <p class="cta-sub">Secure checkout · Instant delivery</p>
+    </div>
+  </div>
+</section>
+
+<!-- OBJECTIONS -->
+<section class="objections-section">
+  <div class="section-eyebrow">Common Questions</div>
+  <h2 class="section-headline">Before You Decide</h2>
+  <div class="objections-grid">
+    <div class="objection-card">
+      <p class="objection-q">"I'm not very technical. Will I be able to use this?"</p>
+      <p class="objection-a">The Excel model does the math automatically — you enter the deal numbers and everything calculates. The AI prompt writes the full report. You don't need spreadsheet experience. The how-to video walks you through every step on a real deal.</p>
+    </div>
+    <div class="objection-card">
+      <p class="objection-q">"What if I only analyze one deal?"</p>
+      <p class="objection-a">One deal where you know exactly what to offer — and walk away from the ones that don't work — pays for this many times over. And the system is yours for every deal after that, forever.</p>
+    </div>
+    <div class="objection-card">
+      <p class="objection-q">"Is $997 really worth it?"</p>
+      <p class="objection-a">Even one professional underwrite can cost more than this. The Blueprint does it in under 20 minutes, on any deal, as many times as you want. One bad assumption on a $1.5M deal costs $150,000+. This system pays for itself the first time you use it.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- BIO -->
+<section class="bio-section">
+  <div class="bio-left">
+    <h3 class="bio-name">Ajay "AJ" Kuckreja</h3>
+    <div class="bio-title">RE Investment Consultant · RV Park Owner-Operator · Success Coach</div>
+    <div class="bio-stats">
+      <div class="bio-stat">20+ years active real estate investing</div>
+      <div class="bio-stat">$100M+ in deal flow evaluated</div>
+      <div class="bio-stat">RV park ownership &amp; operations</div>
+      <div class="bio-stat">4 patents · MBA · MS Electrical Engineering</div>
+    </div>
+  </div>
+  <div class="bio-right">
+    <p>Most advisors tell you what they think will work. <strong>AJ has actually done it.</strong></p>
+    <p>He didn't learn about RV parks by reading about them or attending seminars. He bought one, operated it through two full seasons, navigated the infrastructure problems, solved the operator dynamics, managed the cash flow realities that no spreadsheet captures — and eventually exited it profitably.</p>
+    <div class="bio-quote">
+      <p>"I didn't learn underwriting from a spreadsheet. I've been actively investing in real estate for two decades. I bought an RV park, operated it, solved the problems nobody warns you about — and built this system from what I actually lived. When you reach out, you're talking to someone who's been on both sides of the table."</p>
+    </div>
+    <p>That experience sits alongside 20+ years of active real estate investing across single-family, multi-family, and alternative assets — and a prior career leading technology portfolios responsible for $200M+ in lifetime revenue.</p>
+    <p>📸 Instagram: <strong>@AJKuckreja</strong> &nbsp;·&nbsp; ✉ <strong>aj@sugarpinepm.com</strong></p>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <h2 class="final-cta-headline">Find Your <em>Profit Machine.</em></h2>
+  <p class="final-cta-sub">One payment. Every deal you analyze without it is time and money you won't get back.</p>
+  <a href="https://rvpark.sugarpinepm.com/order" class="final-cta-button">Get the Blueprint →</a>
+  <p class="final-price-note">$997 · One-time payment · Instant delivery · Yours to keep forever</p>
+</section>
+
+<!-- DISCLAIMER -->
+<section style="background:#162D17;border-top:2px solid rgba(212,168,83,0.35);border-bottom:1px solid rgba(212,168,83,0.15);padding:48px 40px;">
+  <div style="max-width:860px;margin:0 auto;">
+    <p style="font-family:'Barlow',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#D4A853;margin-bottom:16px;">Disclaimer</p>
+    <p style="font-family:'Barlow',sans-serif;font-size:12.5px;line-height:1.8;color:#C8D4C4;">
+      <strong style="color:#ffffff;">For Education Purposes only. Not Investment Advice.</strong> This RV Park Profit Blueprint and its materials are provided by Sugarpine Property Management LLC for informational and educational purposes only and do not constitute financial, legal, or investment advice. All examples, metrics, formulas, and offer structures presented are illustrative only and do not guarantee investment returns, lender approval, or transaction outcomes. Real estate investing involves substantial risk, including the potential loss of principal. All offers and strategies discussed are examples only and are not binding commitments of any kind. The investor is solely responsible for conducting independent due diligence and for all investment decisions made. Sugarpine Property Management LLC, its members and managers, accept no liability for investment losses or outcomes resulting from the use of this content. Always consult qualified legal, financial, and real estate professionals before making any investment decision.
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-copy">© 2026 Sugarpine Property Management LLC · sugarpinepm.com · Not for distribution</div>
+  <div class="footer-links">
+    <a href="mailto:aj@sugarpinepm.com">Contact</a>
+    <a href="#">Privacy</a>
+  </div>
+</footer>
+
+</body>
+</html>
