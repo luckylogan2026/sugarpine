@@ -38,7 +38,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);
 
 /* ── header ── */
 header{background:var(--pine);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:66px;border-bottom:2px solid var(--gold)}
-.logo-wrap{display:flex;flex-direction:column;gap:1px}
+.logo-wrap{display:flex;flex-direction:row;align-items:center;gap:12px}
 .logo-name{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:#fff;letter-spacing:.01em;line-height:1.2}
 .logo-name span{color:var(--gold)}
 .logo-tag{font-size:.65rem;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:var(--sage)}
@@ -121,13 +121,13 @@ footer a{color:var(--pine-light);text-decoration:none}
 <body>
 
 <header>
-<div class="logo-wrap" style="display:flex;flex-direction:row;align-items:center;gap:12px;">
-    <img src="LogoNoBG.png" alt="Sugarpine PM" style="height:42px;width:auto;display:block;flex-shrink:0;">
-    <div style="display:flex;flex-direction:column;gap:1px;">
-      <div class="logo-name">Sugarpine <span>Property Management</span></div>
-      <div class="logo-tag">Commercial RE Underwriting Tools</div>
-    </div>
+<div class="logo-wrap">
+  <img src="LogoNoBG.png" alt="Sugarpine PM" style="height:42px;width:auto;flex-shrink:0;">
+  <div>
+    <div class="logo-name">Sugarpine <span>Property Management</span></div>
+    <div class="logo-tag">Commercial RE Underwriting Tools</div>
   </div>
+</div>
 <div class="header-right">sugarpinepm.com</div>
 </header>
 
