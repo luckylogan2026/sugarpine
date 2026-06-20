@@ -567,7 +567,7 @@
 <!-- HEADER -->
 <header class="site-header">
   <div class="logo-text">RV Park <span>Profit Blueprint</span></div>
-  <a href="https://rvpark.sugarpinepm.com/order" class="header-cta">Get the Blueprint</a>
+  <a href="https://rvpark.sugarpinepm.com/order" class="header-cta sp-cta-btn">Get the Blueprint</a>
 </header>
 
 <!-- HERO -->
@@ -587,7 +587,7 @@
 
   </div>
   <div class="hero-divider"></div>
-  <a href="https://rvpark.sugarpinepm.com/order" class="cta-button" style="max-width:380px;">Get the Blueprint — $997</a>
+  <a href="https://rvpark.sugarpinepm.com/order" class="cta-button sp-cta-btn" style="max-width:380px;">Get the Blueprint — $997</a>
 </section>
 
 <!-- PAIN -->
@@ -715,7 +715,7 @@
         <span class="price-point">Modify as you see fit</span>
         <span class="price-point">No subscription</span>
       </div>
-      <a href="https://rvpark.sugarpinepm.com/order" class="cta-button">Get the Blueprint →</a>
+      <a href="https://rvpark.sugarpinepm.com/order" class="cta-button sp-cta-btn">Get the Blueprint →</a>
       <p class="cta-sub">Secure checkout · Instant delivery</p>
     </div>
   </div>
@@ -770,7 +770,7 @@
 <section class="final-cta">
   <h2 class="final-cta-headline">Find Your <em>Profit Machine.</em></h2>
   <p class="final-cta-sub">One payment. Every deal you analyze without it is time and money you won't get back.</p>
-  <a href="https://rvpark.sugarpinepm.com/order" class="final-cta-button">Get the Blueprint →</a>
+  <a href="https://rvpark.sugarpinepm.com/order" class="final-cta-button sp-cta-btn">Get the Blueprint →</a>
   <p class="final-price-note">$997 · One-time payment · Instant delivery · Yours to keep forever</p>
 </section>
 
@@ -792,6 +792,19 @@
     <a href="#">Privacy</a>
   </div>
 </footer>
-
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var sa = params.get('sa');
+  if (sa) {
+    var btns = document.querySelectorAll('.sp-cta-btn');
+    btns.forEach(function(btn) {
+      var url = new URL(btn.href);
+      url.searchParams.set('sa', sa);
+      btn.href = url.toString();
+    });
+  }
+})();
+</script>
 </body>
 </html>
