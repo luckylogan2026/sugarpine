@@ -3,7 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How to Buy Your First Commercial Property — Ajay Kuckreja</title>
+<title>How to Buy Your First Commercial Property | Ajay Kuckreja | Sugarpine PM</title>
+<meta name="description" content="A step-by-step ebook on finding, analyzing, and closing your first commercial real estate deal. Eight chapters, one complete deal walkthrough. By investor and operator Ajay Kuckreja.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sugarpinepm.com/crebook/">
+<meta property="og:title" content="How to Buy Your First Commercial Property">
+<meta property="og:description" content="Eight chapters. One complete deal walkthrough. The step-by-step process for finding, underwriting, and closing your first commercial property.">
+<meta property="og:url" content="https://sugarpinepm.com/crebook/">
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="Sugarpine PM">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to Buy Your First Commercial Property | Sugarpine PM">
+<meta name="twitter:description" content="Eight chapters. One deal walkthrough. The process for closing your first commercial property, by Ajay Kuckreja.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "How to Buy Your First Commercial Property",
+  "description": "A step-by-step ebook covering how to find, analyze, and close your first commercial real estate deal. Eight chapters and one complete deal walkthrough by investor Ajay Kuckreja.",
+  "brand": {"@type": "Brand", "name": "Sugarpine PM"},
+  "author": {"@type": "Person", "name": "Ajay Kuckreja"},
+  "offers": {
+    "@type": "Offer",
+    "price": "27.00",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://shop.sugarpinepm.com/buy?s=1&cart_links%5B%5D=GwYW5&qty%5BGwYW5%5D=1"
+  }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -34,7 +62,7 @@ a{color:var(--gold);text-decoration:none;}
 img{max-width:100%;display:block;}
 
 /* ─── LAYOUT ──────────────────────────────── */
-.wrap{max-width:740px;margin:0 auto;padding:0 24px;}
+.wrap{max-width:740px;margin:0 auto;padding:0 20px;}
 
 /* ─── STICKY BUY BAR ──────────────────────── */
 .sticky-bar{
@@ -49,10 +77,12 @@ img{max-width:100%;display:block;}
 }
 .sticky-bar.visible{transform:translateY(0);}
 .sticky-bar .sb-title{
-  color:white;font-size:14px;font-weight:600;
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  color:white;font-size:17px;font-weight:600;
+  white-space:normal;overflow:visible;
+  flex:1;min-width:0;line-height:1.3;
 }
 .sticky-bar .sb-title span{color:var(--gold);}
+.sticky-bar .btn{flex-shrink:0;}
 .btn{
   display:inline-block;
   background:var(--gold);
@@ -73,8 +103,8 @@ img{max-width:100%;display:block;}
 
 /* ─── EYEBROW ─────────────────────────────── */
 .eyebrow{
-  display:inline-block;font-size:10px;font-weight:700;
-  letter-spacing:0.22em;text-transform:uppercase;
+  display:inline-block;font-size:13px;font-weight:700;
+  letter-spacing:0.18em;text-transform:uppercase;
   color:var(--gold);margin-bottom:12px;
 }
 
@@ -99,21 +129,37 @@ img{max-width:100%;display:block;}
 }
 .hero-inner{max-width:740px;margin:0 auto;position:relative;z-index:1;}
 
-/* Problem line */
-.hero-problem{
-  font-size:13px;font-weight:600;
-  color:#e07070;
-  letter-spacing:0.06em;
+/* Book title */
+.hero-book-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(32px,6vw,58px);
+  font-weight:900;
+  color:var(--gold);
+  line-height:1.1;
+  margin-bottom:24px;
+  max-width:680px;
+  word-break:normal;
+  overflow-wrap:break-word;
+}
+.hero-book-title .title-suffix{
+  font-size:0.45em;
+  font-weight:700;
+  color:var(--sage);
+  opacity:0.7;
+  letter-spacing:0.08em;
   text-transform:uppercase;
-  margin-bottom:18px;
-  display:block;
+  vertical-align:middle;
+  margin-left:6px;
 }
 
 .hero h1{
-  font-size:clamp(30px,5.5vw,52px);
-  font-weight:900;color:white;
-  margin-bottom:18px;
-  line-height:1.08;
+  font-size:clamp(22px,4vw,36px);
+  font-weight:700;color:white;
+  margin-bottom:20px;
+  line-height:1.25;
+  word-break:normal;
+  overflow-wrap:break-word;
+  max-width:620px;
 }
 .hero h1 em{font-style:normal;color:var(--gold);}
 
@@ -173,12 +219,12 @@ img{max-width:100%;display:block;}
 }
 .proof-num{
   font-family:'Playfair Display',serif;
-  font-size:26px;font-weight:900;
+  font-size:30px;font-weight:900;
   color:var(--gold);line-height:1;
 }
 .proof-label{
-  font-size:11px;color:var(--sage);
-  margin-top:3px;letter-spacing:0.04em;
+  font-size:13px;color:var(--sage);
+  margin-top:3px;letter-spacing:0.03em;
 }
 .proof-divider{
   width:1px;height:36px;
@@ -194,11 +240,11 @@ img{max-width:100%;display:block;}
   background:#fff;padding:72px 24px;
 }
 .problem-section h2{
-  font-size:clamp(24px,4vw,34px);
+  font-size:clamp(26px,4vw,36px);
   color:var(--dk);margin-bottom:16px;
 }
 .problem-section .lead{
-  font-size:17px;color:var(--muted);
+  font-size:18px;color:var(--muted);
   max-width:620px;margin-bottom:36px;
   line-height:1.75;
 }
@@ -209,7 +255,7 @@ img{max-width:100%;display:block;}
 }
 .pain-list li{
   display:flex;gap:14px;align-items:flex-start;
-  font-size:15.5px;line-height:1.6;color:var(--text);
+  font-size:16.5px;line-height:1.65;color:var(--text);
 }
 .pain-icon{
   flex-shrink:0;
@@ -228,7 +274,7 @@ img{max-width:100%;display:block;}
 }
 .pain-bridge p{
   font-family:'Playfair Display',serif;
-  font-size:18px;font-style:italic;
+  font-size:20px;font-style:italic;
   color:var(--forest);line-height:1.55;margin:0;
 }
 
@@ -250,11 +296,11 @@ img{max-width:100%;display:block;}
 .mult-inner{max-width:700px;margin:0 auto;position:relative;z-index:1;}
 .mult-inner .eyebrow{margin-bottom:8px;}
 .mult-inner h2{
-  font-size:clamp(24px,4vw,36px);
+  font-size:clamp(26px,4vw,38px);
   color:white;margin-bottom:20px;
 }
 .mult-inner .lead{
-  color:var(--sage);font-size:16px;
+  color:var(--sage);font-size:17px;
   line-height:1.75;margin-bottom:36px;
 }
 .mult-inner .lead strong{color:white;font-weight:600;}
@@ -271,16 +317,16 @@ img{max-width:100%;display:block;}
 .bab-before{background:rgba(192,57,43,0.12);}
 .bab-after{background:rgba(46,107,47,0.25);}
 .bab-label{
-  font-size:9px;font-weight:700;
-  letter-spacing:0.2em;text-transform:uppercase;
-  margin-bottom:14px;display:block;
+  font-size:12px;font-weight:700;
+  letter-spacing:0.15em;text-transform:uppercase;
+  margin-bottom:16px;display:block;
 }
 .bab-before .bab-label{color:#e07070;}
 .bab-after .bab-label{color:var(--gold);}
 .bab-items{list-style:none;display:flex;flex-direction:column;gap:10px;}
 .bab-items li{
-  font-size:14px;color:var(--sage);
-  line-height:1.5;display:flex;gap:10px;align-items:flex-start;
+  font-size:15px;color:var(--sage);
+  line-height:1.55;display:flex;gap:10px;align-items:flex-start;
 }
 .bab-items li .bi{flex-shrink:0;font-size:13px;margin-top:1px;}
 
@@ -313,8 +359,8 @@ img{max-width:100%;display:block;}
   font-size:32px;color:var(--gold);
 }
 .math-caption{
-  font-size:13.5px;color:var(--sage);
-  line-height:1.6;font-style:italic;
+  font-size:15px;color:var(--sage);
+  line-height:1.65;font-style:italic;
   border-top:1px solid var(--mid);
   padding-top:14px;margin-top:4px;
 }
@@ -325,15 +371,15 @@ img{max-width:100%;display:block;}
 ══════════════════════════════════════════ */
 .inside{background:var(--cream);padding:72px 24px;}
 .inside .wrap-hd{margin-bottom:48px;}
-.inside h2{font-size:clamp(24px,4vw,34px);color:var(--dk);margin-bottom:8px;}
-.inside .lead{font-size:16px;color:var(--muted);max-width:560px;line-height:1.65;}
+.inside h2{font-size:clamp(26px,4vw,36px);color:var(--dk);margin-bottom:8px;}
+.inside .lead{font-size:17px;color:var(--muted);max-width:560px;line-height:1.65;}
 
 .chapters{
   border:1px solid var(--border);
   border-radius:4px;overflow:hidden;
 }
 .ch{
-  display:grid;grid-template-columns:52px 1fr;
+  display:grid;grid-template-columns:48px 1fr;
   border-bottom:1px solid var(--border);
   background:white;
   transition:background 0.15s;
@@ -351,14 +397,14 @@ img{max-width:100%;display:block;}
 .ch-body{padding:18px 22px;}
 .ch-title{
   font-family:'Playfair Display',serif;
-  font-size:16px;font-weight:700;
-  color:var(--dk);margin-bottom:3px;
+  font-size:18px;font-weight:700;
+  color:var(--dk);margin-bottom:4px;
 }
-.ch-feature{font-size:13.5px;color:var(--muted);line-height:1.5;margin-bottom:4px;}
+.ch-feature{font-size:15px;color:var(--muted);line-height:1.55;margin-bottom:5px;}
 /* Benefit — the "so you can" line */
 .ch-benefit{
-  font-size:13px;color:var(--mid);
-  font-weight:600;line-height:1.4;
+  font-size:14px;color:var(--mid);
+  font-weight:600;line-height:1.45;
 }
 .ch-benefit::before{content:'→ ';}
 
@@ -368,7 +414,7 @@ img{max-width:100%;display:block;}
 .author{background:white;padding:72px 24px;border-top:1px solid var(--border);}
 .author-inner{max-width:700px;margin:0 auto;}
 .author h2{
-  font-size:clamp(22px,4vw,32px);
+  font-size:clamp(24px,4vw,34px);
   color:var(--dk);margin-bottom:6px;
 }
 .author-role{
@@ -376,7 +422,7 @@ img{max-width:100%;display:block;}
   letter-spacing:0.18em;text-transform:uppercase;
   color:var(--gold);margin-bottom:28px;display:block;
 }
-.author-bio{font-size:16px;line-height:1.78;margin-bottom:14px;color:var(--text);}
+.author-bio{font-size:17px;line-height:1.78;margin-bottom:16px;color:var(--text);}
 .author-bio strong{color:var(--dk);font-weight:600;}
 
 /* Credibility numbers */
@@ -404,29 +450,29 @@ img{max-width:100%;display:block;}
   color:var(--dk);line-height:1;display:block;
 }
 .cred-num em{color:var(--gold);font-style:normal;}
-.cred-desc{font-size:11.5px;color:var(--muted);margin-top:5px;line-height:1.4;}
+.cred-desc{font-size:13px;color:var(--muted);margin-top:5px;line-height:1.4;}
 
 /* ══════════════════════════════════════════
    7. WHO IT'S FOR
 ══════════════════════════════════════════ */
 .fit{background:var(--cream);padding:72px 24px;border-top:1px solid var(--border);}
-.fit h2{font-size:clamp(22px,4vw,32px);color:var(--dk);margin-bottom:8px;}
-.fit .lead{font-size:16px;color:var(--muted);max-width:520px;margin-bottom:36px;line-height:1.65;}
+.fit h2{font-size:clamp(24px,4vw,34px);color:var(--dk);margin-bottom:8px;}
+.fit .lead{font-size:17px;color:var(--muted);max-width:520px;margin-bottom:36px;line-height:1.65;}
 .fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
 @media(max-width:560px){.fit-grid{grid-template-columns:1fr;}}
 .fit-card{border-radius:4px;padding:26px;}
 .fit-card.yes{background:#edf7ed;border:1px solid #a8d4a8;}
 .fit-card.no{background:#fdf3f0;border:1px solid #e8c0b0;}
 .fit-card-label{
-  font-size:9px;font-weight:700;letter-spacing:0.2em;
-  text-transform:uppercase;margin-bottom:14px;display:block;
+  font-size:12px;font-weight:700;letter-spacing:0.15em;
+  text-transform:uppercase;margin-bottom:16px;display:block;
 }
 .fit-card.yes .fit-card-label{color:var(--mid);}
 .fit-card.no .fit-card-label{color:#a0401a;}
 .fit-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
 .fit-list li{
   display:flex;gap:10px;align-items:flex-start;
-  font-size:14.5px;line-height:1.5;
+  font-size:15.5px;line-height:1.55;
 }
 .fit-list li span.icon{flex-shrink:0;margin-top:1px;font-size:13px;}
 
@@ -434,7 +480,7 @@ img{max-width:100%;display:block;}
    8. FAQ (Objection Killer)
 ══════════════════════════════════════════ */
 .faq{background:white;padding:72px 24px;border-top:1px solid var(--border);}
-.faq h2{font-size:clamp(22px,4vw,32px);color:var(--dk);margin-bottom:36px;}
+.faq h2{font-size:clamp(24px,4vw,34px);color:var(--dk);margin-bottom:36px;}
 .faq-list{max-width:680px;display:flex;flex-direction:column;gap:0;}
 .faq-item{border-bottom:1px solid var(--border);}
 .faq-item:first-child{border-top:1px solid var(--border);}
@@ -442,7 +488,7 @@ img{max-width:100%;display:block;}
   display:flex;align-items:center;justify-content:space-between;
   gap:16px;padding:20px 0;
   cursor:pointer;
-  font-weight:600;font-size:15.5px;
+  font-weight:600;font-size:17px;
   color:var(--dk);
   list-style:none;
   user-select:none;
@@ -456,7 +502,7 @@ img{max-width:100%;display:block;}
 }
 details[open] .faq-q::after{transform:rotate(45deg);}
 .faq-a{
-  font-size:15px;color:var(--muted);
+  font-size:16px;color:var(--muted);
   line-height:1.75;padding-bottom:20px;
   max-width:620px;
 }
@@ -498,6 +544,22 @@ details[open] .faq-q::after{transform:rotate(45deg);}
   display:inline-flex;flex-direction:column;
   align-items:center;margin-bottom:28px;
 }
+.price-compare{
+  display:flex;align-items:center;
+  gap:16px;margin-bottom:6px;
+}
+.price-was{
+  font-family:'Playfair Display',serif;
+  font-size:36px;font-weight:700;
+  color:var(--sage);opacity:0.5;
+  line-height:1;
+  text-decoration:line-through;
+  text-decoration-thickness:2px;
+}
+.price-was sup{font-size:18px;vertical-align:super;}
+.price-arrow{
+  font-size:20px;color:var(--gold);opacity:0.7;
+}
 .price-amount{
   font-family:'Playfair Display',serif;
   font-size:62px;font-weight:900;
@@ -529,14 +591,38 @@ footer p{
 }
 footer a{color:var(--gold);opacity:0.85;}
 
-/* ─── MOBILE TWEAKS ───────────────────────── */
+/* ─── MOBILE ──────────────────────────────── */
 @media(max-width:520px){
-  .hero{padding:60px 20px 48px;}
-  .hero-cta{gap:12px;}
-  .math-row{gap:10px;}
+  .hero{padding:56px 18px 44px;}
+  .hero-cta{gap:12px;flex-direction:column;align-items:flex-start;}
+  .btn-xl{font-size:16px;padding:15px 28px;width:100%;text-align:center;box-sizing:border-box;}
+  .math-row{gap:10px;justify-content:center;}
   .math-op{font-size:22px;}
-  .cta-close{padding:60px 20px;}
+  .cta-close{padding:56px 18px;}
   .price-amount{font-size:48px;}
+  .hero-solve{padding:14px 16px;}
+  .ch-body{padding:14px 16px;}
+  .bab-col{padding:18px 16px;}
+  .fit-card{padding:20px 16px;}
+  .author-inner{padding:0;}
+  .math-box{padding:20px 18px;}
+  .sticky-bar{padding:10px 14px;gap:10px;}
+  .sticky-bar .sb-title{font-size:14px;}
+  .sticky-bar .btn{font-size:12px;padding:9px 14px;flex-shrink:0;}
+}
+@media(max-width:400px){
+  .hero h1{font-size:26px;}
+  .hero-trust{gap:10px;font-size:11px;}
+  .btn-xl{font-size:15px;}
+  .proof-bar-inner{gap:14px;}
+  .proof-num{font-size:22px;}
+  .proof-label{font-size:10px;}
+  .ch{grid-template-columns:40px 1fr;}
+  .ch-num{font-size:12px;min-height:70px;}
+}
+@media(max-width:360px){
+  .sticky-bar .sb-title{font-size:13px;}
+  .sticky-bar .btn{font-size:11px;padding:8px 10px;}
 }
 
 </style>
@@ -545,23 +631,23 @@ footer a{color:var(--gold);opacity:0.85;}
 
 <!-- ── STICKY BUY BAR ─────────────────────── -->
 <div class="sticky-bar" id="stickyBar">
-  <span class="sb-title">How to Buy Your First <span>Commercial Property</span> — Ajay Kuckreja</span>
-  <a href="https://shop.sugarpinepm.com/buy?s=1&cart_links%5B%5D=GwYW5&qty%5BGwYW5%5D=1" class="btn">Get it for $27 →</a>
+  <span class="sb-title">How to Buy Your First<br><span>Commercial Property</span></span>
+  <a href="https://shop.sugarpinepm.com/buy?s=1&cart_links%5B%5D=GwYW5&qty%5BGwYW5%5D=1" class="btn">Get the Ebook →</a>
 </div>
 
 <!-- ══════════════════════════════════════════
-     1. HERO — PAS: Problem → Agitate → Solve
+     1. HERO: PAS — Problem, Agitate, Solve
 ══════════════════════════════════════════ -->
 <section class="hero" id="top">
   <div class="hero-inner">
-    <span class="hero-problem">The problem no one tells you about CRE</span>
-    <h1>Most people who want to invest in commercial real estate<br><em>never close a deal.</em></h1>
-    <p class="hero-agitate">Not because they lack capital. Not because the deals aren't there. Because no one teaches them the actual process — how to find deals before they're picked over, how to read a seller's financials without getting fooled, and how to structure an offer that gets accepted.</p>
+    <div class="hero-book-title">How to Buy Your First Commercial Property<span class="title-suffix">&nbsp;— Ebook</span></div>
+    <h1>The No-Nonsense Guide to Finding, Underwriting, and Funding Your First Commercial Deal</h1>
+    <p class="hero-agitate"><strong>Most people who want to invest in commercial real estate never close a deal.</strong> Not because they lack capital. Not because the deals aren't there. Because no one teaches them the actual process: how to find deals before they're picked over, how to read a seller's financials without getting fooled, and how to structure an offer that gets accepted.</p>
     <div class="hero-solve">
-      <p>This guide is <strong>the process, start to finish.</strong> Written by someone who has bought, operated, and exited commercial real estate — not a course creator who studies deals from the outside. Eight chapters. One complete deal walkthrough. Everything you need to go from looking at listings to making your first offer.</p>
+      <p>This ebook is <strong>the process, start to finish.</strong> Written by someone who has bought, operated, and exited commercial properties, not a course creator who studies deals from the outside. Eight chapters. One complete deal walkthrough. Everything you need to go from looking at listings to making your first offer.</p>
     </div>
     <div class="hero-cta">
-      <a href="https://shop.sugarpinepm.com/buy?s=1&cart_links%5B%5D=GwYW5&qty%5BGwYW5%5D=1" class="btn btn-xl">Get the Guide — $27 →</a>
+      <a href="https://shop.sugarpinepm.com/buy?s=1&cart_links%5B%5D=GwYW5&qty%5BGwYW5%5D=1" class="btn btn-xl">Get the Ebook →</a>
       <div class="hero-price-note">
         <span>Instant PDF download</span>
         <span>No subscription. Yours to keep.</span>
@@ -592,7 +678,12 @@ footer a{color:var(--gold);opacity:0.85;}
     <div class="proof-divider"></div>
     <div class="proof-stat">
       <span class="proof-num">$200M+</span>
-      <span class="proof-label">Revenue led in Fortune 500 role</span>
+      <span class="proof-label">Revenue led in Fortune 500</span>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-stat">
+      <span class="proof-num">4</span>
+      <span class="proof-label">Engineering patents granted</span>
     </div>
   </div>
 </div>
@@ -603,12 +694,12 @@ footer a{color:var(--gold);opacity:0.85;}
 <section class="problem-section">
   <div class="wrap">
     <span class="eyebrow">Why most investors stay stuck</span>
-    <h2>The information exists. The problem is it's never in one place — and most of it comes from people who've never owned a deal.</h2>
+    <h2>The information exists. The problem is it's never in one place, and most of it comes from people who've never owned a deal.</h2>
     <p class="lead">If you've researched commercial real estate, you know the pattern. YouTube gives you concepts, not mechanics. Courses charge $2,000 for content you could get in a weekend. Brokers explain deals in their own interest, not yours. And by the time you feel ready, you've spent months reading without any real path forward.</p>
     <ul class="pain-list">
       <li>
         <span class="pain-icon">✗</span>
-        You understand cap rates in theory but freeze when you try to apply them to a real listing's numbers — because sellers almost never report income accurately.
+        You understand cap rates in theory but freeze when you try to apply them to a real listing's numbers, because sellers almost never report income accurately.
       </li>
       <li>
         <span class="pain-icon">✗</span>
@@ -620,23 +711,23 @@ footer a{color:var(--gold);opacity:0.85;}
       </li>
       <li>
         <span class="pain-icon">✗</span>
-        You're not sure who you actually need on your team — or when you need them — so due diligence feels like a minefield you're navigating alone.
+        You're not sure who you actually need on your team, or when you need them, so due diligence feels like a minefield you're navigating alone.
       </li>
     </ul>
     <div class="pain-bridge">
-      <p>None of this is complicated. It just needs to be explained by someone who has actually done it — and laid out in the right order.</p>
+      <p>None of this is complicated. It just needs to be explained by someone who has actually done it, laid out in the right order.</p>
     </div>
   </div>
 </section>
 
 <!-- ══════════════════════════════════════════
-     4. THE MULTIPLIER — BAB Frame
+     4. THE MULTIPLIER: BAB Frame
 ══════════════════════════════════════════ -->
 <section class="multiplier">
   <div class="mult-inner">
     <span class="eyebrow">Why commercial changes the math</span>
     <h2>In residential, you wait for the market to give you value. In commercial, you build it yourself.</h2>
-    <p class="lead">In residential real estate, your property is worth what a comparable house sold for down the street. You have almost no control over that number. In commercial real estate, your property is valued as a <strong>multiple of its net operating income.</strong> Raise the income, and the value rises with it — immediately, not after years of waiting for appreciation.</p>
+    <p class="lead">In residential real estate, your property is worth what a comparable house sold for down the street. You have almost no control over that number. In commercial real estate, your property is valued as a <strong>multiple of its net operating income.</strong> Raise the income, and the value rises with it. Immediately, not after years of waiting for appreciation.</p>
 
     <div class="bab">
       <div class="bab-col bab-before">
@@ -645,7 +736,7 @@ footer a{color:var(--gold);opacity:0.85;}
           <li><span class="bi">✗</span> You evaluate properties by price per unit or gut feel</li>
           <li><span class="bi">✗</span> You rely on the seller's stated income as the real number</li>
           <li><span class="bi">✗</span> You don't know what a fair price looks like until you've already paid it</li>
-          <li><span class="bi">✗</span> Value creation feels abstract — something that just happens over time</li>
+          <li><span class="bi">✗</span> Value creation feels abstract, something that just happens over time</li>
         </ul>
       </div>
       <div class="bab-col bab-after">
@@ -660,7 +751,7 @@ footer a{color:var(--gold);opacity:0.85;}
     </div>
 
     <div class="math-box">
-      <span class="math-label">The multiplier in practice — at a 7% cap rate</span>
+      <span class="math-label">The multiplier in practice: at a 7% cap rate</span>
       <div class="math-row">
         <div class="math-cell">
           <span class="math-num">$10K</span>
@@ -672,27 +763,27 @@ footer a{color:var(--gold);opacity:0.85;}
           <div class="math-desc">Created in property value</div>
         </div>
       </div>
-      <p class="math-caption">Raise rents $833/month across the property. Cut one unnecessary contract. Add a revenue stream that's being ignored. The income goes up, the value multiplies. <strong>This is the mechanic this guide teaches you to engineer from day one.</strong></p>
+      <p class="math-caption">Raise rents $833/month across the property. Cut one unnecessary contract. Add a revenue stream that's being ignored. The income goes up, the value multiplies. <strong>This is the mechanic this ebook teaches you to engineer from day one.</strong></p>
     </div>
   </div>
 </section>
 
 <!-- ══════════════════════════════════════════
-     5. WHAT'S INSIDE — FAB (Feature → Benefit)
+     5. WHAT'S INSIDE: FAB (Feature to Benefit)
 ══════════════════════════════════════════ -->
 <section class="inside">
   <div class="wrap">
     <div class="wrap-hd">
       <span class="eyebrow">What's inside</span>
       <h2>Eight chapters. No filler. Every one is a skill you use on every deal.</h2>
-      <p class="lead">Each chapter is written as a working tool, not background reading. You'll reference this guide when you're looking at a real listing — not just read it once and shelve it.</p>
+      <p class="lead">Each chapter is written as a working tool, not background reading. You'll reference this ebook when you're looking at a real listing, not just read it once and shelve it.</p>
     </div>
     <div class="chapters">
       <div class="ch">
         <div class="ch-num">Intro</div>
         <div class="ch-body">
           <div class="ch-title">Is This the Best-Kept Secret in Investing?</div>
-          <div class="ch-feature">How the income-to-value multiplier works — and why it makes commercial fundamentally different from every other asset class.</div>
+          <div class="ch-feature">How the income-to-value multiplier works, and why it makes commercial fundamentally different from every other asset class.</div>
           <div class="ch-benefit">So you understand the core mechanic before you look at a single deal.</div>
         </div>
       </div>
@@ -707,7 +798,7 @@ footer a{color:var(--gold);opacity:0.85;}
       <div class="ch">
         <div class="ch-num">2</div>
         <div class="ch-body">
-          <div class="ch-title">The Mindset Shift — and Where the Deals Are</div>
+          <div class="ch-title">The Mindset Shift and Where the Deals Are</div>
           <div class="ch-feature">How to think like an operator, not a speculator. How to find off-market and lightly-marketed deals before they're picked over on LoopNet.</div>
           <div class="ch-benefit">So you're not competing with every other buyer for the same overpriced listings.</div>
         </div>
@@ -716,7 +807,7 @@ footer a{color:var(--gold);opacity:0.85;}
         <div class="ch-num">3</div>
         <div class="ch-body">
           <div class="ch-title">How to Read a Deal in 90 Seconds</div>
-          <div class="ch-feature">A two-step screen that tells you whether any deal deserves your time — before you spend hours on it.</div>
+          <div class="ch-feature">A two-step screen that tells you whether any deal deserves your time, before you spend hours on it.</div>
           <div class="ch-benefit">So you stop wasting weekends on deals that should take two minutes to eliminate.</div>
         </div>
       </div>
@@ -724,7 +815,7 @@ footer a{color:var(--gold);opacity:0.85;}
         <div class="ch-num">4</div>
         <div class="ch-body">
           <div class="ch-title">The Five Numbers That Run Every Deal</div>
-          <div class="ch-feature">GPI, EGI, NOI, cap rate, DSCR — what each one measures, how they connect, and why a seller's stated income almost never equals the real income.</div>
+          <div class="ch-feature">GPI, EGI, NOI, cap rate, DSCR: what each one measures, how they connect, and why a seller's stated income almost never equals the real income.</div>
           <div class="ch-benefit">So you're never fooled by a seller's reported numbers again.</div>
         </div>
       </div>
@@ -757,14 +848,14 @@ footer a{color:var(--gold);opacity:0.85;}
         <div class="ch-body">
           <div class="ch-title">Tax Strategy, Exit Planning, and What Comes Next</div>
           <div class="ch-feature">Cost segregation, bonus depreciation, REPS status, the 1031 exchange. How to plan your exit before you close.</div>
-          <div class="ch-benefit">So the after-tax return looks nothing like what you expected going in — in a good way.</div>
+          <div class="ch-benefit">So the after-tax return looks nothing like what you expected going in. In a good way.</div>
         </div>
       </div>
       <div class="ch">
         <div class="ch-num">+</div>
         <div class="ch-body">
           <div class="ch-title">Real Deal Walkthrough: From Listing to LOI</div>
-          <div class="ch-feature">A complete acquisition analyzed start to finish — every metric from every chapter applied to a real deal, from the listing's stated numbers to the final offer structure.</div>
+          <div class="ch-feature">A complete acquisition analyzed start to finish: every metric from every chapter applied to a real deal, from the listing's stated numbers to the final offer structure.</div>
           <div class="ch-benefit">So you've already run through the process once before your first real deal.</div>
         </div>
       </div>
@@ -774,8 +865,8 @@ footer a{color:var(--gold);opacity:0.85;}
 
 <!-- MID-PAGE CTA -->
 <div style="background:var(--forest);padding:36px 24px;text-align:center;border-top:1px solid var(--mid);border-bottom:1px solid var(--mid);">
-  <p style="color:var(--sage);font-size:15px;margin-bottom:18px;max-width:500px;margin-left:auto;margin-right:auto;">Everything above — the screens, the frameworks, the offer structures — for $27. Less than a broker's coffee budget for a deal they'll never bring you.</p>
-  <a href="https://shop.sugarpinepm.com/buy?s=1&cart_links%5B%5D=GwYW5&qty%5BGwYW5%5D=1" class="btn btn-lg">Get the Guide — $27 →</a>
+  <p style="color:var(--sage);font-size:17px;margin-bottom:18px;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.65;">Everything above: the screens, the frameworks, the offer structures. For $27. Less than a broker's coffee budget for a deal they'll never bring you.</p>
+  <a href="https://shop.sugarpinepm.com/buy?s=1&cart_links%5B%5D=GwYW5&qty%5BGwYW5%5D=1" class="btn btn-lg">Get the Ebook →</a>
 </div>
 
 <!-- ══════════════════════════════════════════
@@ -786,17 +877,17 @@ footer a{color:var(--gold);opacity:0.85;}
     <span class="eyebrow">About the author</span>
     <h2>Ajay Kuckreja</h2>
     <span class="author-role">Investor · Operator · Boulder, Colorado</span>
-    <p class="author-bio">I've spent 20 years investing in real estate. Before that, I spent 15 years as a Fortune 500 executive leading silicon chip product portfolios that generated over <strong>$200M in lifetime revenue.</strong> I hold an MBA in Entrepreneurship and an MS in Electrical Engineering. I am not an academic.</p>
-    <p class="author-bio">A few years ago I <strong>bought an RV park from scratch, operated it for two years, and sold it.</strong> I did the sourcing, underwriting, financing, operations, and exit on a real commercial asset. Everything in this guide reflects what I actually do on deals — not what I've read in someone else's course.</p>
-    <p class="author-bio">I wrote this because the information that exists for first-time commercial investors is either too surface-level to act on, or it's buried inside a $2,000 course. The mechanics of a good deal are not complicated. They just need to be explained by someone who has run them for real.</p>
+    <p class="author-bio">Ajay has underwritten over <strong>$100M in commercial real estate deals</strong> and spent 20 years as an active investor. Before that, he spent 15 years as a Fortune 500 executive leading product portfolios that generated over <strong>$200M in lifetime revenue.</strong> He holds an MBA in Entrepreneurship and an MS in Electrical Engineering.</p>
+    <p class="author-bio">He has personally bought, operated, and exited commercial assets, handling every stage: sourcing, underwriting, financing, operations, and the full exit. Everything in this ebook reflects what he actually does on deals, not what he's read in someone else's course.</p>
+    <p class="author-bio">He wrote this ebook because the information that exists for first-time commercial investors is either too surface-level to act on, or buried inside a $2,000 course. The mechanics of a good deal are not complicated. They just need to be explained by someone who has run them for real.</p>
     <div class="cred-grid">
       <div class="cred-cell">
         <span class="cred-num">20<em>+</em></span>
         <div class="cred-desc">Years investing in real estate</div>
       </div>
       <div class="cred-cell">
-        <span class="cred-num">$5M<em>+</em></span>
-        <div class="cred-desc">Real estate portfolio managed</div>
+        <span class="cred-num">$100M<em>+</em></span>
+        <div class="cred-desc">Deal flow underwritten</div>
       </div>
       <div class="cred-cell">
         <span class="cred-num">$200M<em>+</em></span>
@@ -816,8 +907,8 @@ footer a{color:var(--gold);opacity:0.85;}
 <section class="fit">
   <div class="wrap">
     <span class="eyebrow">Who this is for</span>
-    <h2>Built for investors who are serious about executing — not perpetually researching.</h2>
-    <p class="lead">This guide is direct about who it's designed for. Read both columns before you buy.</p>
+    <h2>Built for investors who are serious about executing, not perpetually researching.</h2>
+    <p class="lead">This ebook is direct about who it's designed for. Read both columns before you buy.</p>
     <div class="fit-grid">
       <div class="fit-card yes">
         <span class="fit-card-label">This is for you if...</span>
@@ -832,10 +923,10 @@ footer a{color:var(--gold);opacity:0.85;}
       <div class="fit-card no">
         <span class="fit-card-label">This is not for you if...</span>
         <ul class="fit-list">
-          <li><span class="icon">✗</span> You want someone else to find, underwrite, and close the deal for you. (That's the $2,997 service.)</li>
+          <li><span class="icon">✗</span> You want someone else to find, underwrite, and close the deal for you.</li>
           <li><span class="icon">✗</span> You're looking for passive income with no involvement or learning curve.</li>
           <li><span class="icon">✗</span> You're not willing to spend real time on due diligence and financial analysis.</li>
-          <li><span class="icon">✗</span> You expect the first deal to be frictionless. It won't be — but this guide makes the friction cost you less.</li>
+          <li><span class="icon">✗</span> You expect the first deal to be frictionless. It won't be, but this ebook makes the friction cost you less.</li>
         </ul>
       </div>
     </div>
@@ -843,7 +934,7 @@ footer a{color:var(--gold);opacity:0.85;}
 </section>
 
 <!-- ══════════════════════════════════════════
-     8. FAQ — Objection Killers
+     8. FAQ: Objection Killers
 ══════════════════════════════════════════ -->
 <section class="faq">
   <div class="wrap">
@@ -853,32 +944,27 @@ footer a{color:var(--gold);opacity:0.85;}
 
       <details class="faq-item">
         <summary class="faq-q">I've never bought a commercial property. Is this too advanced?</summary>
-        <p class="faq-a">No. The guide is written for someone who understands basic investing concepts but has never run a commercial deal. It explains every term it uses, in the order you need it. Chapter 4 covers the five core metrics from scratch. If you can read a P&L, you can follow this guide.</p>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-q">Is this specific to RV parks, or does it cover other asset classes?</summary>
-        <p class="faq-a">The examples lean on RV parks and alternative assets because that's where AJ's operating experience runs deepest — and where private investors have the most accessible entry points right now. But <strong>the frameworks transfer directly to any commercial asset class.</strong> The underwriting mechanics, offer structures, financing strategies, and tax principles are identical whether you're looking at self-storage, mobile home parks, retail strip centers, or multifamily. Chapter 1 maps the full landscape.</p>
+        <p class="faq-a">No. The ebook is written for someone who understands basic investing concepts but has never run a commercial deal. It explains every term it uses, in the order you need it. Chapter 4 covers the five core metrics from scratch.</p>
       </details>
 
       <details class="faq-item">
         <summary class="faq-q">How is this different from free content on YouTube or BiggerPockets?</summary>
-        <p class="faq-a">Free content covers concepts. This guide covers mechanics. The difference is the difference between understanding what a cap rate is and knowing how to normalize a seller's T-12 to find the real NOI before you price the deal. It's also written by someone who has closed and exited a commercial deal, not a content creator who teaches investing as a business.</p>
+        <p class="faq-a">Free content covers concepts. This ebook covers mechanics. The difference is the difference between understanding what a cap rate is and knowing how to normalize a seller's T-12 to find the real NOI before you price the deal. It's also written by someone who has closed and exited a commercial deal, not a content creator who teaches investing as a business.</p>
       </details>
 
       <details class="faq-item">
-        <summary class="faq-q">Do I need a lot of capital to apply what's in this guide?</summary>
-        <p class="faq-a">Chapter 6 covers three offer structures: conventional financing, seller carry, and creative alternatives. Not all of them require significant capital upfront. Chapter 7 explains SBA lending options that exist specifically for owner-operators acquiring commercial properties. That said, this guide is not a no-money-down system. It's a process for acquiring real assets responsibly.</p>
+        <summary class="faq-q">Do I need a lot of capital to apply what's in this ebook?</summary>
+        <p class="faq-a">Chapter 6 covers three offer structures: conventional financing, seller carry, and creative alternatives. Not all of them require significant capital upfront. Chapter 7 explains SBA lending options that exist specifically for owner-operators acquiring commercial properties. That said, this ebook is not a no-money-down system. It's a process for acquiring real assets responsibly.</p>
       </details>
 
       <details class="faq-item">
-        <summary class="faq-q">What format does the guide come in?</summary>
-        <p class="faq-a">Instant PDF download. No app, no login, no platform. You get a link after purchase and the file is yours to keep, download, and print. Works on any device.</p>
+        <summary class="faq-q">What format does the ebook come in?</summary>
+        <p class="faq-a">The ebook is available in two formats: an HTML version you can read in any browser, and a PDF you can download, save, and print. Both are included with your purchase. No app, no login, no platform required.</p>
       </details>
 
       <details class="faq-item">
-        <summary class="faq-q">What if I want more hands-on help after reading it?</summary>
-        <p class="faq-a">There are two options. The <strong>$97 RV Park Deal Analysis training</strong> walks through a real acquisition start to finish — 45 minutes of live underwriting on an actual deal. The <strong>$2,997 Done-For-You Deal Analysis</strong> is AJ analyzing a specific deal you're looking at. Both are available at <a href="https://sugarpinepm.com">sugarpinepm.com</a>.</p>
+        <summary class="faq-q">What if I want more hands-on help after reading the ebook?</summary>
+        <p class="faq-a">The <a href="https://sugarpinepm.com/rvtraining" style="text-decoration:underline;"><strong>$97 RV Park Deal Analysis training</strong></a> walks through a real acquisition start to finish: 40 minutes of live underwriting on an actual deal, including a demo of how a complete analysis gets done in minutes rather than hours.</p>
       </details>
 
     </div>
@@ -891,14 +977,18 @@ footer a{color:var(--gold);opacity:0.85;}
 <section class="cta-close">
   <div class="cta-close-inner">
     <span class="eyebrow">Ready to start</span>
-    <h2>The frameworks. The mechanics.<br><em>The first deal.</em></h2>
-    <p class="sub">Everything in this guide took 20 years of investing and several expensive lessons to accumulate. You can get it in a single sitting — for less than a dinner out.</p>
+    <h2>Twenty years of hard lessons.<br><em>One weekend to read them.</em></h2>
+    <p class="sub">Everything a first-time commercial investor needs to know — the screens, the underwriting, the offer structures, the financing — for less than a dinner out. Read it once. Use it on every deal you ever look at.</p>
     <div class="price-display">
-      <span class="price-amount"><sup>$</sup>27</span>
-      <span class="price-note">Instant PDF download · Yours to keep</span>
+      <div class="price-compare">
+        <span class="price-was"><sup>$</sup>50</span>
+        <span class="price-arrow">→</span>
+        <span class="price-amount"><sup>$</sup>27</span>
+      </div>
+      <span class="price-note">HTML + PDF · Instant access · Yours to keep</span>
     </div>
-    <a href="https://shop.sugarpinepm.com/buy?s=1&cart_links%5B%5D=GwYW5&qty%5BGwYW5%5D=1" class="btn btn-xl">Get the Guide Now →</a>
-    <p class="guarantee">No subscription. One-time purchase. <strong>Instant download</strong> — you'll have it in under 60 seconds.</p>
+    <a href="https://shop.sugarpinepm.com/buy?s=1&cart_links%5B%5D=GwYW5&qty%5BGwYW5%5D=1" class="btn btn-xl">Get the Ebook →</a>
+    <p class="guarantee">No subscription. One-time purchase. <strong>Instant download.</strong> You'll have it in under 60 seconds.</p>
   </div>
 </section>
 
@@ -909,7 +999,7 @@ footer a{color:var(--gold);opacity:0.85;}
     <a href="mailto:aj@sugarpinepm.com">aj@sugarpinepm.com</a> &nbsp;·&nbsp;
     @AJKuckreja on Instagram and YouTube<br>
     © 2026 Sugarpine Property Management LLC &nbsp;·&nbsp; Boulder, Colorado<br><br>
-    This guide is for educational and informational purposes only and does not constitute financial, legal, investment, or tax advice. Real estate investing involves risk, including possible loss of capital. Past results are not indicative of future performance. Consult a qualified attorney, CPA, and financial advisor before making any investment decision.
+    This ebook is for educational and informational purposes only and does not constitute financial, legal, investment, or tax advice. Real estate investing involves risk, including possible loss of capital. Past results are not indicative of future performance. Consult a qualified attorney, CPA, and financial advisor before making any investment decision.
   </p>
 </footer>
 
