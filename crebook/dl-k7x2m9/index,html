@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Your ebook is ready — Sugarpine PM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#1A3D1B;--forest-deep:#112B12;--gold:#D4A853;--gold-deep:#A87D2E;--cream:#F7F5F0;--cream-soft:#FFFDF7;--line:#E2DCC8;--ink:#1F3D20}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',Helvetica,Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:48px 20px}
+.card{background:var(--cream-soft);border:1px solid var(--line);border-radius:16px;max-width:560px;width:100%;padding:44px 38px;box-shadow:0 20px 50px -30px rgba(31,61,32,.35)}
+.check{width:56px;height:56px;border-radius:50%;background:var(--forest);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 22px}
+h1{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--forest);text-align:center;line-height:1.2}
+.sub{text-align:center;margin-top:12px;color:rgba(31,61,32,.75);font-size:15px}
+.formats{margin-top:32px;display:flex;flex-direction:column;gap:14px}
+.fmt{display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-decoration:none;transition:border-color .15s ease,transform .15s ease}
+.fmt:hover{border-color:var(--gold);transform:translateY(-1px)}
+.fmt .t{font-weight:700;color:var(--forest);font-size:16px}
+.fmt .d{font-size:13px;color:rgba(31,61,32,.6);margin-top:2px}
+.fmt .go{font-family:'Playfair Display',serif;font-weight:700;color:var(--gold-deep);white-space:nowrap}
+.note{margin-top:26px;font-size:13px;color:rgba(31,61,32,.6);text-align:center;border-top:1px solid var(--line);padding-top:20px}
+.next{margin-top:34px;background:var(--forest-deep);border-radius:12px;padding:24px;color:var(--cream)}
+.next .tag{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.next h2{font-family:'Playfair Display',serif;font-size:19px;margin-top:8px;color:var(--cream)}
+.next p{font-size:14px;color:rgba(247,245,240,.8);margin-top:6px}
+.next a{display:inline-block;margin-top:14px;background:var(--gold-deep);color:var(--cream-soft);text-decoration:none;font-weight:700;font-size:14px;padding:10px 22px;border-radius:999px}
+.foot{margin-top:28px;font-size:12px;color:rgba(31,61,32,.5);text-align:center}
+.foot a{color:var(--gold-deep);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="check">✓</div>
+  <h1>You're in. The ebook is yours.</h1>
+  <p class="sub">Thank you for the purchase. <strong>How to Buy Your First Commercial Property</strong>, in both formats, no login ever required.</p>
+
+  <div class="formats">
+    <a class="fmt" href="read.html">
+      <span><span class="t">Read it in your browser</span><br><span class="d">Phone-friendly HTML. Start right now.</span></span>
+      <span class="go">Open →</span>
+    </a>
+    <a class="fmt" href="How-to-Buy-Your-First-Commercial-Property.pdf" download>
+      <span><span class="t">Download the PDF</span><br><span class="d">Save it, print it, keep it forever.</span></span>
+      <span class="go">Download →</span>
+    </a>
+  </div>
+
+  <p class="note">Bookmark this page, it's your permanent access. A copy of these links is also on its way to your email.</p>
+
+  <div class="next">
+    <div class="tag">While you're here</div>
+    <h2>See the whole method run in one minute.</h2>
+    <p>Everything Chapter 5 teaches you to do by hand, the RVP Underwriter app does in about sixty seconds. Your first look at any deal is free.</p>
+    <a href="https://sugarpinepm.com/underwriter">Try it free →</a>
+  </div>
+</div>
+<p class="foot">Questions? <a href="mailto:aj@sugarpinepm.com">aj@sugarpinepm.com</a> · © 2026 Sugarpine Property Management LLC</p>
+</body>
+</html>
