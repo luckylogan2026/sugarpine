@@ -100,18 +100,6 @@ header{position:sticky;top:0;z-index:50;background:rgba(247,245,240,.88);backdro
 .video-head{max-width:620px;margin:0 auto 30px;text-align:center}
 .video-head h2{font-size:clamp(1.7rem,3.4vw,2.4rem);color:var(--cream);margin-top:14px}
 .video-frame{max-width:880px;margin:0 auto;border-radius:16px;overflow:hidden;border:1px solid rgba(200,212,196,.18);box-shadow:0 30px 60px -35px rgba(0,0,0,.7)}
-/* ===== DEMO VIDEO PLACEHOLDER =====
-   To go live, delete .video-ph below and replace with:
-   <div style="position:relative;padding-top:56.25%">
-     <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="RVP Underwriter demo"
-       style="position:absolute;inset:0;width:100%;height:100%;border:0" allowfullscreen></iframe>
-   </div>
-   ================================== */
-.video-ph{aspect-ratio:16/9;background:radial-gradient(120% 140% at 50% 0%,#1A3D1B 0%,#112B12 55%,#0D1F0E 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;cursor:pointer}
-.video-ph .play{width:78px;height:78px;border-radius:50%;background:rgba(255,189,89,.14);border:2px solid var(--peach);display:flex;align-items:center;justify-content:center;transition:transform .2s ease}
-.video-ph:hover .play{transform:scale(1.06)}
-.video-ph .play::after{content:"";margin-left:6px;border-left:22px solid var(--peach);border-top:13px solid transparent;border-bottom:13px solid transparent}
-.video-ph .cap{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage)}
 .video-sub{margin-top:16px;text-align:center;font-size:14px;color:var(--sage)}
 
 /* ticker */
@@ -228,7 +216,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 36px}
 .foot-links a{text-decoration:none}
 .foot-links a:hover{color:var(--forest)}
 .disclaimer{margin-top:16px;font-size:12px;font-style:italic;color:rgba(31,61,32,.5)}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover,.video-ph:hover .play{transform:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover{transform:none}}
 </style>
 <script type="application/ld+json">
 {
@@ -330,19 +318,12 @@ footer{border-top:1px solid var(--line);padding:44px 0 36px}
       <h2>A real deal, underwritten in front of you.</h2>
     </div>
     <div class="video-frame">
-      <!-- ===== DEMO VIDEO PLACEHOLDER =====
-           Replace this .video-ph div with your YouTube embed:
-           <div style="position:relative;padding-top:56.25%">
-             <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="RVP Underwriter demo"
-               style="position:absolute;inset:0;width:100%;height:100%;border:0" allowfullscreen></iframe>
-           </div>
-      ================================== -->
       <div style="position:relative;padding-top:56.25%">
-        <iframe src="https://www.youtube.com/embed/T_INYiukiDY" title="RVP Underwriter demo"
-         style="position:absolute;inset:0;width:100%;height:100%;border:0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/WaY4yvzQ5LQ" title="RVP Underwriter demo — RV park underwriting in 2 minutes"
+          style="position:absolute;inset:0;width:100%;height:100%;border:0" allowfullscreen loading="lazy"></iframe>
       </div>
     </div>
-    <p class="video-sub">From a folder of broker PDFs to a defensible offer, start to finish.</p>
+    <p class="video-sub">From a folder of broker PDFs to a defensible offer, start to finish. Want the full walkthrough, every report opened and explained? <a href="https://youtu.be/T_INYiukiDY" target="_blank" rel="noopener" style="color:var(--peach);font-weight:600">Watch the 8-minute version →</a></p>
   </div>
 </section>
 
