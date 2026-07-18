@@ -3,14 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RVP Underwriter — Underwrite any income property in a minute</title>
-<meta name="description" content="Drop in the OM, T-12, and rent roll. RVP Underwriter normalizes the numbers, exposes red flags, and returns a defensible offer in under a minute.">
-<meta property="og:title" content="RVP Underwriter — Underwrite any income property in a minute">
-<meta property="og:description" content="Drop in the OM, T-12, and rent roll. RVP Underwriter normalizes the numbers, exposes red flags, and returns a defensible offer in under a minute.">
+<title>RV Park Underwriting Tool | Free Income Property Deal Analysis — RVP Underwriter</title>
+<meta name="description" content="Free underwriting tool for RV parks, mobile home parks, and income properties. Drop in the OM, T-12, and rent roll — get normalized NOI, red flags, and three offer structures in about a minute. First 5 underwrites free.">
+<link rel="canonical" href="https://sugarpinepm.com/underwriter/">
+<meta property="og:title" content="RV Park Underwriting Tool | Free Income Property Deal Analysis">
+<meta property="og:description" content="Drop in the OM, T-12, and rent roll. Get normalized NOI, red flags, and three offer structures in about a minute. First 5 underwrites free.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://sugarpinepm.com/underwriter/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
   --forest:#1A3D1B;
@@ -36,6 +38,8 @@ img{max-width:100%;display:block}
 a{color:inherit}
 .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
 h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.12;letter-spacing:-0.01em}
+h1,h2{font-weight:900}
+.plan .price{font-weight:900}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep)}
 .eyebrow::before{content:"";width:26px;height:2px;background:var(--gold-deep)}
 .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-weight:700;font-size:15px;text-decoration:none;border-radius:999px;padding:13px 28px;transition:transform .15s ease,box-shadow .15s ease}
@@ -180,7 +184,7 @@ blockquote{margin-top:34px;border-left:2px solid var(--peach);padding-left:20px;
 .plan.popular{border-color:rgba(212,168,83,.7);box-shadow:0 0 0 1px rgba(212,168,83,.5),0 24px 40px -28px rgba(31,61,32,.35);transform:translateY(-8px)}
 .plan .pop-tag{position:absolute;top:-12px;left:28px;background:var(--gold-deep);color:var(--cream-soft);font-size:10px;letter-spacing:.2em;text-transform:uppercase;padding:4px 12px;border-radius:999px}
 .plan h3{font-size:20px;color:var(--forest)}
-.plan .price{margin-top:14px;font-family:var(--serif);font-size:38px;font-weight:700;color:var(--forest)}
+.plan .price{margin-top:14px;font-family:var(--serif);font-size:38px;font-weight:900;color:var(--forest)}
 .plan .price small{font-family:var(--sans);font-size:15px;font-weight:400;color:rgba(31,61,32,.55)}
 .plan .annual{margin-top:4px;font-size:13px;color:rgba(31,61,32,.55)}
 .plan .desc{margin-top:12px;font-size:14px;color:rgba(31,61,32,.72)}
@@ -226,12 +230,47 @@ footer{border-top:1px solid var(--line);padding:44px 0 36px}
 .disclaimer{margin-top:16px;font-size:12px;font-style:italic;color:rgba(31,61,32,.5)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover,.video-ph:hover .play{transform:none}}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "RVP Underwriter",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "url": "https://rvpunderwriter.com",
+  "description": "AI-assisted underwriting tool for RV parks, mobile home communities, and income properties. Upload the OM, T-12, and rent roll to get normalized NOI, researched red flags, three offer structures, and lender-ready documents in minutes.",
+  "creator": {
+    "@type": "Person",
+    "name": "Ajay Kuckreja",
+    "worksFor": {"@type": "Organization", "name": "Sugarpine Property Management"}
+  },
+  "offers": [
+    {"@type": "Offer", "name": "Analyst", "price": "0", "priceCurrency": "USD", "description": "Unlimited instant deal checks, first 5 full underwrites free"},
+    {"@type": "Offer", "name": "Investor", "price": "99", "priceCurrency": "USD", "description": "15 deals per month, full underwriting report, drafted LOI"},
+    {"@type": "Offer", "name": "Dealmaker", "price": "249", "priceCurrency": "USD", "description": "50 deals per month, lender memo, pitch deck, Excel model, negotiation playbook"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "How long does a commercial real estate underwrite take with RVP Underwriter?", "acceptedAnswer": {"@type": "Answer", "text": "About a minute for the five headline numbers, and typically under three minutes for the full underwriting report, including the live market research pass."}},
+    {"@type": "Question", "name": "What documents do I need to underwrite a deal?", "acceptedAnswer": {"@type": "Answer", "text": "Whatever you have. OM, T-12, rent roll — any subset works. The more you provide, the tighter the normalization. It even reads a zip."}},
+    {"@type": "Question", "name": "Why is the normalized NOI different from the seller's NOI?", "acceptedAnswer": {"@type": "Answer", "text": "Because it counts the costs the seller's books leave out: a management fee even if they self-manage, a capital reserve, realistic repairs, verified occupancy, and the property-tax bill you'd actually pay. Every adjusted line is shown with a plain-English reason, and an independent second AI pass audits the work."}},
+    {"@type": "Question", "name": "What happens to my deal data?", "acceptedAnswer": {"@type": "Answer", "text": "Your documents are processed to produce your analysis and are never shared or used for anything else. Saved deals live in your account, and everything sent to a lender or investor carries your identity."}},
+    {"@type": "Question", "name": "Is the underwriting tool free?", "acceptedAnswer": {"@type": "Answer", "text": "Instant deal checks are free and unlimited with no account required. Your first 5 full underwrites are free with a free account, no credit card. Paid plans start at $99/month."}},
+    {"@type": "Question", "name": "Can I change the underwriting assumptions?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Set your own DSCR, cash-on-cash, and cost of capital. Ask the underwriter to re-run at a different price or leverage, and it re-runs instantly."}}
+  ]
+}
+</script>
 </head>
 <body>
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#"><img src="logo.png" alt="" style="width:34px;height:34px;object-fit:contain" onerror="this.outerHTML='<span class=&quot;brand-mark&quot;>R</span>'"> RVP Underwriter</a>
+    <a class="brand" href="#"><img src="logo.png" alt="Sugarpine Property Management pinecone logo" style="width:34px;height:34px;object-fit:contain" onerror="this.outerHTML='<span class=&quot;brand-mark&quot;>R</span>'"> RVP Underwriter</a>
     <nav class="nav-links">
       <a href="#demo">Demo</a>
       <a href="#how">How it works</a>
